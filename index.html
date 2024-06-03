@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DiffUHaul</title>
+  <link rel="icon" type="image/png" href="https://omriavrahami.com/static/images/icon.png" />
+  <link rel="canonical" href="https://omriavrahami.com/diffuhaul" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3ETG3ZXBL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C3ETG3ZXBL');
+  </script>
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="DiffUHaul: A Training-Free Method for Object Dragging in Images">
+  <meta property="og:site_name" content="DiffUHaul">
+  <meta property="og:url" content="https://omriavrahami.com/diffuhaul">
+  <meta property="og:title" content="DiffUHaul: A Training-Free Method for Object Dragging in Images">
+  <meta name="description" content="DiffUHaul: A Training-Free Method for Object Dragging in Images">
+  <meta property="og:description" content="DiffUHaul: A Training-Free Method for Object Dragging in Images">
+
+  <meta property="og:image" content="https://omriavrahami.com/diffuhaul/static/images/teaser_1200_630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta property="og:image" content="https://omriavrahami.com/diffuhaul/static/images/teaser_300_300.jpg">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script type="text/javascript" src="./static/slick/slick.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              DiffUHaul: A Training-Free Method for Object Dragging in Images
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://omriavrahami.com">Omri Avrahami</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://rinongal.github.io/">Rinon Gal</a><sup>1,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://chechiklab.biu.ac.il/~gal/">Gal Chechik</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.ohadf.com/">Ohad Fried</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.huji.ac.il/~danix/">Dani Lischinski</a><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <a href="http://latentspace.cc/">Arash Vahdat*</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://weilinie.github.io/">Weili Nie*</a><sup>1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>NVIDIA,</span>
+              <span class="author-block"><sup>2</sup>The Hebrew University of Jerusalem,</span>
+              <span class="author-block"><sup>3</sup>Tel Aviv University,</span>
+              <span class="author-block"><sup>4</sup>Reichman University</span>
+            </div>
+
+            <div class="eql-cntrb">
+              <small><sup>*</sup>Indicates Equal Advising</small>
+            </div>
+
+            <!-- <div>
+              <p style="font-size:23px;font-weight:bold;padding-top: 5px;">SIGGRPAH 2024</p>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="static/paper/DiffUHaul.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>PDF</span>
+                  </a>
+                </span> -->
+
+                <!-- arXiv Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/TODO" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=VR1sXMgChxM"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/ZichengDuan/TheChosenOne"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Unofficial)</span>
+                  </a>
+                </span> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <div id="teaser" class="has-text-centered">
+          <img style="width: 100%;" src="./static/images/teaser_1200_630.png" alt="Blended Latent Diffusion teaser.">
+        </div> -->
+
+        <video id="teaser" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+          <source src="static/videos/teaser.mp4" type="video/mp4">
+        </video>
+
+        <h2 class="subtitle has-text-centered">
+          <span class="method-name">DiffUHaul</span> - given an image with an object, our method can seamlessly relocate
+          it within a scene.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Text-to-image diffusion models have proven effective for solving many image editing tasks. However, the
+              seemingly straightforward task of seamlessly relocating objects within a scene remains surprisingly
+              challenging. Existing methods addressing this problem often struggle to function reliably in real-world
+              scenarios due to lacking spatial reasoning. In this work, we propose a training-free method, dubbed
+              DiffUHaul, that harnesses the spatial understanding of a localized text-to-image model, for the object
+              dragging task. Blindly manipulating layout inputs of the localized model tends to cause low editing
+              performance due to the intrinsic entanglement of object representation in the model. To this end, we first
+              apply attention masking in each denoising step to make the generation more disentangled across different
+              objects and adopt the self-attention sharing mechanism to preserve the high-level object appearance.
+              Furthermore, we propose a new diffusion anchoring technique: in the early denoising steps, we interpolate
+              the attention features between source and target images to smoothly fuse new layouts with the original
+              appearance; in the later denoising steps, we pass the localized features from the source images to the
+              interpolated images to retain fine-grained object details. To adapt DiffUHaul to real-image editing, we
+              apply a DDPM self-attention bucketing that can better reconstruct real images with the localized model.
+              Finally, we introduce an automated evaluation pipeline for this task and showcase the efficacy of our
+              method. Our results are reinforced through a user preference study.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper video. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <div class="content has-text-justified">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video">
+                  <!-- <iframe src="https://www.youtube.com/embed/VR1sXMgChxM?rel=0&amp;showinfo=0" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                  <video id="teaser" controls="" playsinline="" height="100%">
+                    <source src="static/videos/DiffUHall_video.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method explanation -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+
+            <p>
+              Recently, several <i>localized</i> text-to-image models were developed by the community that add spatial
+              controllability to the task of text-to-image generation. A natural question is then whether the localized
+              understanding of the 2D pixel world in such models can be harnessed for the task of object dragging.
+              Hence, we examine the disentanglement properties of such models, and propose a series of modifications
+              that allow them to serve as a backbone for drag-and-drop movement of objects within an image.
+              Specifically, we use the recently introduced <a href="https://blobgen-2d.github.io/">BlobGEN model</a>,
+              and demonstrate that its spatial understanding can enable significantly more robust object dragging
+              without requiring fine-tuning or training.
+            </p>
+
+            <p>
+              In pursuit of our solution, we begin by revealing an entanglement problem in the localized text-to-image
+              models, through which the prompt-based localized controls of different image regions interfere with each
+              other. We trace the root cause to the commonly used Gated Self-Attention layers,
+              where each individual layout embedding are free to attend to all the visual features.
+              We propose an inference-time masking-based solution, named gated self-attention masking, and show
+              that improving the model disentanglement leads to better object dragging performance.
+            </p>
+
+            <p>
+              Next, specially for the object dragging task, we first adopt the commonly-used self-attention sharing
+              mechanism to preserve the high-level object appearance. To better transfer the
+              fine-grained object details from source images to target images and better harness spatial understanding
+              of the model, we propose a novel soft anchoring mechanism: in early denoising steps, which control the
+              object shape and scene layout in an image, we interpolate the self-attention features of the source image
+              and those of the target image with a coefficient relative to the diffusion time step. This process
+              promotes a smooth fusion between the target layout and source appearance. Then, in later denoising steps,
+              which control the fine-grained visual appearance in an image, we update the interpolated attention
+              features from the corresponding features in the source image via the nearest-neighbor copying.
+            </p>
+
+            <div class="container">
+              <img src="./static/images/method.jpg" />
+              <br />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <h5 class="title is-5">
+              Please
+              &nbsp;
+              <u style="font-size:30px">click</u>
+              <i style="font-size:30px" class="fa-regular fa-hand-pointer"></i>
+              &nbsp;
+              on the following images to reveal our method output.
+            </h5>
+
+          </div>
+
+          <section class="hero is-light is-small">
+            <div class="columns">
+              <div class="column is-4">
+                <img src="./static/images/results/pig/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/corgi/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/ball/inp.jpg" class="method-result" />
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column is-4">
+                <img src="./static/images/results/cow/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/bench/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/bird/inp.jpg" class="method-result" />
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column is-4">
+                <img src="./static/images/results/elephant/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/truck/inp.jpg" class="method-result" />
+              </div>
+              <div class="column is-4">
+                <img src="./static/images/results/pipe/inp.jpg" class="method-result" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citations -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you find this research useful, please cite the following:</p>
+
+      <pre><code>@article{avrahami2023chosen,
+  title={The Chosen One: Consistent Characters in Text-to-Image Diffusion Models},
+  author={Avrahami, Omri and Hertz, Amir and Vinker, Yael and Arar, Moab and Fruchter, Shlomi and Fried, Ohad and Cohen-Or, Daniel and Lischinski, Dani},
+  journal={arXiv preprint arXiv:2311.10093},
+  year={2023}
+}</code></pre>
+    </div>
+  </section> -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <p>
+          You are free to borrow the of this website, we just ask that you link back to this page in the footer. This
+          page was adapted from <a href="https://github.com/nerfies/nerfies.github.io">this</a> source code.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
